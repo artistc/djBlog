@@ -23,6 +23,7 @@ Posted by {{ comment.user_name }} on {{ comment.submit_date|date:"F j, Y" }}
 
 	{% get_comment_form for post as comment_form %}
 	<form id="comment_form" action="{% comment_form_target %}" method="post">
+	  {% csrf_token %}
 	  {{ comment_form }}
 	   	<input name="next" type="hidden" value="{% url single_post slug=post.slug %}" />
 	   	<input class="submit-post" name="post" type="submit" value="Submit" />

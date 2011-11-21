@@ -5,7 +5,7 @@
     <h2 class="title">
         <a href="/post/{{ post.slug }}">{{ post.title }}</a>
     </h2>
-	<p class="meta"><small>{{ post.published|date:"H:i" }} Posted by Azamat | <a href="#">Edit</a> | <a href="#">Comments ({{comment_count}}) &raquo;</a></small></p>
+	<p class="meta"><small>{{ post.published|date:"H:i" }} Posted by Azamat | <a href="#">Comments ({{comment_count}}) &raquo;</a></small></p>
     <div class="entry">
             {{ post.body|safe }}
     </div>
