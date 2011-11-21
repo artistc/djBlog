@@ -1,11 +1,12 @@
-
+{% load comments %}
+{% get_comment_count for post as comment_count %}
 
 <div class="post">
 	<p class="date">{{ post.published|date:"F" }} <b>{{ post.published|date:"j" }}</b></p>
     <h2 class="title">
         <a href="/post/{{ post.slug }}">{{ post.title }}</a>
     </h2>
-	<p class="meta"><small>{{ post.published|date:"H:i" }} Posted by Azamat | <a href="#">Comments ({{comment_count}}) &raquo;</a></small></p>
+	<p class="meta"><small>{{ post.published|date:"H:i" }} Posted by Azamat | <a href="/post/{{ post.slug }}">Comments ({{comment_count}}) &raquo;</a></small></p>
     <div class="entry">
             {{ post.body|safe }}
     </div>
