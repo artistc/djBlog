@@ -1,0 +1,8 @@
+#Mon Nov 21 17:09:19 GMT 2011
+WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
+defaultDestination=C\:/Web/Projects/djangoBlog
+defaultVariables=
+eclipse.preferences.version=1
+includeTeamPrivateFiles=false
+map|0=/|,|,|.project;.pydevproject;.settings/|,
+useCurrentDateForDestinationFiles=false

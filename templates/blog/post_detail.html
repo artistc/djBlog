@@ -1,0 +1,10 @@
+<div class="post">
+	<p class="date">{{ post.published|date:"F" }} <b>{{ post.published|date:"j" }}</b></p>
+    <h2 class="title">
+        <a href="{% url single_post object_id=post.id %}">{{ post.title }}</a>
+    </h2>
+	<p class="meta"><small>{{ post.published|date:"H:i" }} Posted by Azamat | <a href="#">Edit</a> | <a href="#">No Comments &raquo;</a></small></p>
+    <div class="entry">
+            {{ post.body|safe }}
+    </div>
+</div>
