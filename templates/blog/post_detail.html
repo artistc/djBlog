@@ -1,10 +1,31 @@
+{% extends "base.html" %}
+{% load comments %}
+{% get_comment_list for post as comment_list %}
+
+{% block content %}
+	{% include "blog/post.html" %}
+
 <div class="post">
-	<p class="date">{{ post.published|date:"F" }} <b>{{ post.published|date:"j" }}</b></p>
-    <h2 class="title">
-        <a href="{% url single_post object_id=post.id %}">{{ post.title }}</a>
-    </h2>
-	<p class="meta"><small>{{ post.published|date:"H:i" }} Posted by Azamat | <a href="#">Edit</a> | <a href="#">No Comments &raquo;</a></small></p>
-    <div class="entry">
-            {{ post.body|safe }}
-    </div>
-</div>
+
+<h2 class="title">Comments</h2>
+
+
+		{% for comment in comment_list %}
+
+Posted by {{ comment.user_name }} on {{ comment.submit_date|date:"F j, Y" }}
+
+<div class="entry">
+				{{ comment.comment }}</div>
+
+
+		{% endfor %}</div>
+
+
+	{% get_comment_form for post as comment_form %}
+	<form id="comment_form" action="{% comment_form_target %}" method="post">
+	  {{ comment_form }}
+	   	<input name="next" type="hidden" value="{% url single_post slug=post.slug %}" />
+	   	<input class="submit-post" name="post" type="submit" value="Submit" />
+	</form>
+
+{% endblock %}

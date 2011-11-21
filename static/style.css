@@ -105,7 +105,7 @@ hr {
 	text-decoration: none;
 	text-transform: uppercase;
 	border-top: 2px solid #EBEAD1;
-	font-family: Arial, Helvetica, sans-serif; 
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 11px;
 	color: #182C33;
@@ -286,7 +286,7 @@ hr {
 	text-decoration: none;
 	text-transform: uppercase;
 	border-style:groove;
-	font-family: Arial, Helvetica, sans-serif; 
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 11px;
 	color: #182C33;
@@ -405,4 +405,12 @@ hr {
 	border-bottom: 1px dotted #939393;
 	text-decoration: none;
 	color: #939393;
+}
+
+#id_honeypot, label[for=id_honeypot] {
+	display: none !important;
+}
+
+#comment_form label, #comment_form input[type=text], #comment_form textarea {
+	display: block;
 }
