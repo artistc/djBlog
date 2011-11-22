@@ -12,7 +12,7 @@ def blog_generic_view(request, redirect_to, paginate=True, **view_args):
     view_args   - Dictionary of args to pass to final view
     """
 
-    if paginate:
+    if paginate and redirect_to != date_based.archive_month:
         view_args['paginate_by'] = 5
 
     # Allow caller to pass queryset or use all post objects
