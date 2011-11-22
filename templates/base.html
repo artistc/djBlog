@@ -60,6 +60,17 @@
 			{% load blog_sidebar %}
 			<ul>
 				<li>
+					<div id="search" >
+						<form method="get" action="{% url blog_post_search %}">
+							<div>
+								<input type="text" name="s" id="s" value="" />
+								<input type="submit" id="search-submit" value="Search" />
+							</div>
+						</form>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+				<li id="categories">
 					{% blog_categories %}
 				</li>
 				<li>

@@ -28,4 +28,7 @@ urlpatterns = patterns('',
     # Home page (post list)
     url(r'^$', blog_generic_view, {'redirect_to': list_detail.object_list},
         name="blog_home"),
+
+    # Search
+    url(r'^search/$', blog_post_search, name="blog_post_search"),
 )
