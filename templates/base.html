@@ -3,8 +3,10 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>{% block title %} Azamat's Blog {% endblock %}</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+<meta name="author" content="Azamat Galimzhanov" />
+<meta name="nickname" content="Khazidhea" />
+<meta name="keywords" content="Azamat, Galimzhanov, Khazidhea, blog" />
+<meta name="description" content="Azamat's blog" />
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -15,13 +17,23 @@
         <p>Some thoughts out loud</p>
 	</div>
 	<div id="menu">
-		<ul>
-			<li class="active"><a href="/">Home</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Gallery</a></li>
-			<li><a href="{% url static_page template="about" %}">About</a></li>
-			<li><a href="#">Contact </a></li>
-		</ul>
+		<ul class="ca-menu">
+            <li>
+                <a href="/">
+                    <span class="ca-icon">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="/code/">
+                    <span class="ca-icon">Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url static_page template="about" %}">
+                    <span class="ca-icon">About</span>
+                </a>
+            </li>
+        </ul>
 	</div>
 </div>
 <hr />

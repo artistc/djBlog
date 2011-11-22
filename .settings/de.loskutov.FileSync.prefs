@@ -1,8 +1,8 @@
-#Mon Nov 21 19:16:10 GMT 2011
+#Mon Nov 21 22:43:06 GMT 2011
 WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
-defaultDestination=C\:/Web/Projects/djangoBlog
+defaultDestination=C\:/Web/Projects/djBlog
 defaultVariables=
 eclipse.preferences.version=1
 includeTeamPrivateFiles=false
-map|0=/|,|,|.git/;.project;.pydevproject;.settings/|,
+map|0=/|,|,|.settings/;.pydevproject;.project;.git/|,
 useCurrentDateForDestinationFiles=false

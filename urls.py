@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     (r'^static/(.*)$', 'django.views.static.serve',
-        {'document_root': 'C;/Web/Projects/djangoBlog/static/'}),
+        {'document_root': 'C:/Web/Projects/djBlog/static/'}),
 
     # Homepage is base template with nothing else (i.e. index page)
     (r'^', include('blog.urls')),
