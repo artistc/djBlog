@@ -20,9 +20,14 @@
 
     <form id="comment_form" action="{% comment_form_target %}" method="post">
     	{% csrf_token %}
-        {{ comment_form }}
-        <input name="next" type="hidden" value="{% url single_post slug=post.slug %}" />
-        <input class="submit-post" name="post" type="submit" value="Submit" />
+    	<table>
+        	{{ comment_form }}
+        	<tr>
+        		<td><input name="next" type="hidden" value="{% url single_post slug=post.slug %}" /></td>
+        		<td><input class="submit-post" name="post" type="submit" value="Submit" /></td>
+        	</tr>
+        </table>
+
     </form>
 
 {% endblock %}
