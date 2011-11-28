@@ -352,7 +352,7 @@ hr {
 
 #sidebar ul {
 	margin: 0;
-	padding: 0;
+	padding-left: 20px;
 	list-style: none;
 }
 
@@ -571,4 +571,21 @@ pre code {
 	margin: 0 0 0 40px;  /*--Left Margin--*/
 	padding: 18px 0;
 	display: block;
+}
+
+span.side img
+{
+	border:1px solid #666;
+	width: 100%;
+}
+
+span.side
+{
+    margin-top: 0ex;
+    margin-bottom: 0.25ex;
+    margin-left: 1em;
+    position:relative;
+    right:0;
+    float:right;
+    width: 180px;
 }
