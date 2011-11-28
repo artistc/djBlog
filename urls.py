@@ -13,8 +13,13 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
+    # Static
     (r'^static/(.*)$', 'django.views.static.serve',
         {'document_root': 'C:/Web/Projects/djBlog/static/'}),
+
+    # CV
+    (r'^cv/(.*)$', 'django.views.static.serve',
+        {'document_root': 'C:/Web/Projects/djBlog/cv/'}),
 
     # Homepage is base template with nothing else (i.e. index page)
     (r'^', include('blog.urls')),
